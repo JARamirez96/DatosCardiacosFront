@@ -1,0 +1,154 @@
+body {
+  background-color: black;
+}
+
+div.contenedor {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+div.contenedor::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+div.izquierda {
+  display: flex;
+  align-items: flex-start;
+}
+
+div.derecha {
+  display: flex;
+  align-items: flex-end;
+}
+
+div.nombre {
+  max-width: 50%;
+
+}
+
+div.informacion {
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  align-content: center;
+}
+
+derecha {
+  display: flex;
+  align-content: flex-start;
+}
+
+h3 {
+  text-align: center;
+  color: #FFFFFF;
+  background: rgb(24, 113, 187);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+i,
+input {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  width: 75%;
+}
+
+div.genero {
+  max-width: 260px;
+}
+
+div.column.edad {
+  max-width: 300px;
+}
+
+div.chequeomed {
+  max-width: 500px;
+}
+
+div.nombre {
+  margin: auto;
+  width: 500px;
+  padding: 10px;
+}
+
+.nombre,
+.gen,
+.edad,
+.enfermedad,
+.ejercicio,
+.benergizantes,
+.ritmo,
+.chequeo,
+.pcardiacos {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.probcardiacos {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.edad p,
+div.edad input {
+  display: inline;
+}
+
+div.justificar {
+  text-align: justify;
+  padding: 2px;
+  color: red;
+}
+
+div.detalles {
+  text-align: center;
+  padding: 2px;
+  color: red;
+}
+
+textarea {
+  resize: none;
+  width: 90%;
+}
+
+select {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 5px;
+  margin: auto;
+}
