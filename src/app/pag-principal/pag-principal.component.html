@@ -1,174 +1,197 @@
+<nav>
+  <div class="busqueda">
+    <button class="enviardatos" mat-button>Ingresar Información</button>
+    <button class="paginformacion" mat-button routerLink = "paginformacion">Información</button>
+    <button class="infoparoscardiacos" mat-button routerLink = "parocardiaco">¿Qué son los páros cardiacos?</button>
+  </div>
+</nav>
+
 <div class="contenedor">
   <!--Nombre-->
-  <div class="nombre">
-    <div class="informacion">
-      <h3>Nombre</h3>
-      <div class="nombre">
-        <input type="text">
-      </div>
-    </div>
-  </div>
-  <!--Género-->
-  <div class="row">
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column genero">
+  <form (ngSubmit)="Sending(f)" #f="ngForm">
+    <div class="nombre">
       <div class="informacion">
-        <h3>Género</h3>
-        <select>
-          <option value="nada">-</option>
-          <option value="hombre">Hombre</option>
-          <option value="mujer">Mujer</option>
-        </select>
-      </div>
-    </div>
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Que edad tiene-->
-  <div class="row">
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column edad">
-      <div class="informacion">
-        <h3>Edad</h3>
-        <div class="edad">
-          <input type="text">
+        <h3>Nombre</h3>
+        <div class="camponombre">
+          <mat-form-field class="lineanombre">
+            <input name="nombre" ngModel matInput value="" required>
+          </mat-form-field>
         </div>
       </div>
     </div>
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Haces ejercicio-->
-  <div class="row">
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column">
-      <div class="informacion">
-        <h3>¿Haces ejercicio?</h3>
-        <select>
-          <option value="nada">-</option>
-          <option value="si">Sí</option>
-          <option value="no">No</option>
-        </select>
-        <div class="ejercicio">
-          <input type="text">
+    <!--Género-->
+    <div class="row">
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column genero">
+        <div class="informacion">
+          <h3>Género</h3>
+          <mat-radio-group ngModel name = "hombremujer" aria-label="Select an option">
+            <mat-radio-button value="Hombre">Hombre</mat-radio-button><br>
+            <mat-radio-button value="Mujer">Mujer</mat-radio-button>
+          </mat-radio-group>
         </div>
       </div>
-    </div>
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Toma bebidas energizantes-->
-  <div class="row">
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column">
-      <div class="informacion">
-        <h3>¿Tomas bebidas energizantes?</h3>
-        <select>
-          <option value="nada">-</option>
-          <option value="si">Sí</option>
-          <option value="no">No</option>
-        </select>
-        <div class="benergizantes">
-          <input type="text">
-        </div>
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
       </div>
     </div>
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Ritmo cardiaco normal-->
-  <div class="row">
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column">
-      <div class="informacion">
-        <h3>Ritmo cardiaco normal</h3>
-        <div class="ritmo">
-          <input type="text">
+    <!--Que edad tiene-->
+    <div class="row">
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column edad">
+        <div class="informacion">
+          <h3>Edad</h3>
+          <div class="edad">
+            <mat-form-field class="lineaedad">
+              <input name="edad" ngModel matInput value="" required>
+            </mat-form-field>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Padece alguna enfermedad-->
-  <div class="row">
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column">
-      <div class="informacion">
-        <h3>¿Padeces alguna enfermedad?</h3>
-        <select>
-          <option value="nada">-</option>
-          <option value="si">Sí</option>
-          <option value="no">No</option>
-        </select>
-        <div class="enfermedad">
-          <input type="text">
-        </div>
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
       </div>
     </div>
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Padece problemas cardiacos-->
-  <div class="row">
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column">
-      <div class="informacion">
-        <h3>¿Padeces problemas cardiacos?</h3>
-        <select>
-          <option value="nada">-</option>
-          <option value="si">Sí</option>
-          <option value="no">No</option>
-        </select>
-        <div class="pcardiacos">
-          <input type="text">
+    <!--Haces ejercicio-->
+    <div class="row">
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column">
+        <div class="informacion">
+          <h3>¿Haces ejercicio?</h3>
+          <mat-radio-group ngModel name = "elegirejercicio" aria-label="Select an option">
+            <mat-radio-button value="Sí">Si</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+          <div class="ejercicio">
+            <mat-form-field class="example-full-width">
+              <input name="ejercicio" ngModel matInput value="">
+            </mat-form-field>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-  </div>
-  <!--Chequeo con un médico-->
-  <div class="row">
-    <div class="column derecha">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
-    </div>
-    <div class="column chequeomed">
-      <div class="informacion">
-        <h3>¿Te haces algún chequeo con un médico cuando sientes anomalias en alguna parte de tu cuerpo?</h3>
-        <select>
-          <option value="nada">-</option>
-          <option value="si">Sí</option>
-          <option value="no">No</option>
-        </select>
-        <div class="chequeo">
-          <input type="text">
-        </div>
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
       </div>
     </div>
-    <div class="column">
-      <img src="../../assets/HeartRate.png" alt="HeartRate">
+    <!--Toma bebidas energizantes-->
+    <div class="row">
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column">
+        <div class="informacion">
+          <h3>¿Tomas bebidas energizantes?</h3>
+          <mat-radio-group ngModel name = "elegirbebida" aria-label="Select an option">
+            <mat-radio-button value="Sí">Si</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+          <div class="benergizantes">
+            <mat-form-field class="example-full-width">
+              <input name="energizante" ngModel matInput value="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
     </div>
-  </div>
+    <!--Ritmo cardiaco normal-->
+    <div class="row">
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column">
+        <div class="informacion">
+          <h3>Ritmo cardiaco normal</h3>
+          <div class="ritmo">
+            <mat-form-field class="example-full-width">
+              <input name="ritmocardiaco" ngModel matInput value="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+    </div>
+    <!--Padece alguna enfermedad-->
+    <div class="row">
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column">
+        <div class="informacion">
+          <h3>¿Padeces alguna enfermedad?</h3>
+          <mat-radio-group ngModel name = "elegirenfermedad" aria-label="Select an option">
+            <mat-radio-button value="Sí">Si</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+          <div class="enfermedad">
+            <mat-form-field class="example-full-width">
+              <input name="enfermedad" ngModel matInput value="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+    </div>
+    <!--Padece problemas cardiacos-->
+    <div class="row">
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column">
+        <div class="informacion">
+          <h3>¿Padeces problemas cardiacos?</h3>
+          <mat-radio-group ngModel name = "elegirpcardiaco" aria-label="Select an option">
+            <mat-radio-button value="si">Sí</mat-radio-button>
+            <mat-radio-button value="no">No</mat-radio-button>
+          </mat-radio-group>
+          <div class="pcardiacos">
+            <mat-form-field class="example-full-width">
+              <input name="problemascardiacos" ngModel matInput value="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+    </div>
+    <!--Chequeo con un médico-->
+    <div class="row">
+      <div class="column derecha">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+      <div class="column chequeomed">
+        <div class="informacion">
+          <h3>¿Te haces algún chequeo con un médico cuando sientes anomalias en alguna parte de tu cuerpo?</h3>
+          <mat-radio-group ngModel name = "elegirchequeo" aria-label="Select an option">
+            <mat-radio-button value="Sí">Si</mat-radio-button>
+            <mat-radio-button value="No">No</mat-radio-button>
+          </mat-radio-group>
+          <div class="chequeo">
+            <mat-form-field class="example-full-width">
+              <input name="chequeomed" ngModel matInput value="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <img src="../../assets/HeartRate.png" alt="HeartRate">
+      </div>
+    </div>
+    <div class="send">
+      <button class="enviar" mat-button>Enviar</button>
+    </div>
+  </form>
 </div>

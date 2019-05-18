@@ -1,0 +1,53 @@
+<nav>
+  <div class="busqueda">
+    <button class="enviardatos" mat-button routerLink="">Ingresar Información</button>
+    <button class="paginformacion" mat-button>Información</button>
+    <button class="infoparoscardiacos" mat-button routerLink="/parocardiaco">¿Qué son los páros cardiacos?</button>
+  </div>
+</nav>
+
+<div class="contenedor">
+  <p> <span>Nombre: </span> {{formulario.nombre}}</p>
+  <p> <span>Género: </span> {{formulario.hombremujer}} </p>
+  <p> <span>Edad: </span> {{formulario.edad}}</p>
+  <p> <span>¿Haces ejercicio?</span> {{formulario.elegirejercicio}} </p>
+  <p *ngIf="formulario.elegirejercicio == 'Sí' && formulario.ejercicio != '' "> <span>¿Qué deporte practicas?</span>
+    {{formulario.ejercicio}} </p>
+  <p> <span>¿Tomas bebidas energizantes?</span> {{formulario.elegirbebida}} </p>
+  <p *ngIf="formulario.elegirbebida == 'Sí' && formulario.energizante != '' "> <span>¿Qué bebida tomas?</span>
+    {{formulario.energizante}} </p>
+  <p> <span>¿Padeces alguna enfermedad?</span> {{formulario.elegirenfermedad}} </p>
+  <p *ngIf="formulario.elegirenfermedad == 'Sí' && formulario.enfermedad != '' "> <span>¿Cuál?</span>
+    {{formulario.enfermedad}} </p>
+  <p> <span>¿Padeces problemas cardiacos?</span> {{formulario.elegirpcardiaco}} </p>
+  <p *ngIf="formulario.elegirpcardiaco == 'Sí' && formulario.problemascardiacos != '' "> <span>¿Cuál?</span>
+    {{formulario.problemascardiacos}} </p>
+  <p> <span>¿Te haces algún chequeo médico?</span> {{formulario.elegirchequeo}} </p>
+  <p *ngIf="formulario.elegirchequeo == 'Sí' && formulario.chequeomed != '' "> <span>¿Cuál?</span>
+    {{formulario.chequeomed}} </p>
+
+  <div *ngIf="formulario.elegirbebida == 'Sí' ">
+    <h2>Bebidas Energizantes</h2>
+    <p>En niños, adolescentes y adultos jóvenes las bebidas
+      energizantes no tienen ningún beneficio terapéutico probado.
+    </p>
+    <p>
+      Estas podrían aumentar el riesgo de efectos adversos severos relacionados con: 
+    </p>
+    <ul>
+      <li>La toxicidad de sus ingredientes</li>
+      <li>La ingestión en combinación con el alcohol</li>
+      <li>Intoxicación con cafeína</li>
+      <li>Problemas de dependencia</li>
+      <li>Afecciones cardiovasculares y respiratorias: taquiarritmias, aumenta de la presión arterial, neurológicos:
+        genera
+        dificultad para la concentración, irritabilidad, alucinaciones, cefalea, convulsiones. </li>
+      <li>Taquicardia</li>
+      <li>Riesgo de endometriosis en modelos murinos</li>
+    </ul>
+  </div>
+  <h2>Ritmo cardiaco normal: {{formulario.ritmocardiaco}} </h2>
+  <div class="tabla">
+    <img src="../../assets/Tabla.png" alt="Tabla">
+  </div>
+</div>

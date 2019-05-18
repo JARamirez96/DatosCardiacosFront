@@ -1,5 +1,48 @@
-body {
-  background-color: black;
+/*Inicia Navegación*/
+busqueda{
+  display: flex;
+  align-content: flex-end;
+}
+
+button{
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0px;
+}
+
+nav{
+  background-color: red;
+  padding: 1px;
+}
+
+button:hover{
+  background-color: rgb(250, 70, 70);
+  text-decoration: none;
+}
+
+.enviardatos{
+  background-color: rgb(250, 70, 70);
+}
+/*Finaliza Navegación*/
+
+div.send{
+  padding: 10px;
+  text-align: center;
+}
+
+.enviar{
+  color: #FFFFFF;
+  background-color: red;
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+
+.enviar:hover{
+  background-color: rgb(250, 70, 70);
+  text-decoration: none;
 }
 
 div.contenedor {
@@ -75,7 +118,7 @@ div.genero {
 }
 
 div.column.edad {
-  max-width: 300px;
+  max-width: 200px;
 }
 
 div.chequeomed {
@@ -84,8 +127,24 @@ div.chequeomed {
 
 div.nombre {
   margin: auto;
-  width: 500px;
+  width: 400px;
   padding: 10px;
+}
+
+.camponombre{
+  padding: 0px;
+}
+
+.lineanombre {
+  width: 80%;
+}
+
+.lineaedad {
+  width: 40%;
+}
+
+.example-full-width {
+  width: 70%;
 }
 
 .nombre,
@@ -98,8 +157,9 @@ div.nombre {
 .chequeo,
 .pcardiacos {
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-top: -5px;
+  /* padding-top: 5px;
+  padding-bottom: 5px; */
 }
 
 .probcardiacos {
@@ -151,4 +211,22 @@ select {
   flex: 1;
   padding: 5px;
   margin: auto;
+}
+
+/*Angular Material*/
+
+input{
+  padding-bottom: 0;
+}
+
+mat-radio-button{
+  padding: 5px;
+}
+
+@media only screen and (max-width:600px) {
+  button{
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
 }

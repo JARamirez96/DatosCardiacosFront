@@ -2,32 +2,30 @@ div.logo {
   text-align: center;
 }
 
-nav {
-  background-color: red;
-}
 
 img {
   width: 50%;
 }
 
-informacion{
+/* busqueda{
     display: flex;
     align-content: flex-end;
 }
 
-a{
+button{
     color: #FFFFFF;
     border: 1px solid #FFFFFF;
     padding: 10px;
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: red;
 }
 
 nav{
     padding:10px 0;
 }
 
-a:hover{
+button:hover{
     background-color: rgb(255, 87, 87);
     text-decoration: none;
-}
+} */
